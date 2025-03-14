@@ -1,0 +1,9 @@
+Voici les inscription de {{inscriptions[0].employe.prenom}}  </br>
+{% if (message) %}
+    {{message}}
+{% endif %}
+{% for inscription in inscriptions %}
+    id inscription : {{inscription.id}}<br/>
+    id formation : {{inscription.statut}}<br/>
+    libelle produit : {{inscription.formation.produit.libelle}}<br/>
+{% endfor %}

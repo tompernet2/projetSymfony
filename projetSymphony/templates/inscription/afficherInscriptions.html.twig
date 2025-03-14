@@ -1,0 +1,17 @@
+<h1>Liste des Inscriptions</h1>
+
+{% if (message) %}
+    {{message}}
+{% endif %}
+
+{% for inscription in inscriptions %}
+        <hr/>
+        Id employe : {{ inscription.employe.id }}<br/>
+        Id formation : {{ inscription.formation.id }}<br/>
+        Statut : {{ inscription.statut }}<br/>
+        <a href="{{path('app_valider_inscription', {'idInscription' : inscription.id})}}">Validée</a>
+        <a href="{{path('app_refuser_inscription', {'idInscription' : inscription.id})}}">Refusée</a><br/>
+        <hr/>
+{% endfor %}
+
+<a href="{{path('app_affichageAdmin')}}">Retour</a><br/>

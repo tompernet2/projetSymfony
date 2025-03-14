@@ -1,0 +1,12 @@
+Voici la liste des formations : </br>
+{% if (message) %}
+    {{message}}
+{% endif %}
+{% for formation in lesFormations %}
+    Date de début : {{ formation.dateDebut|date("m/d/Y")}}<br/>
+    Nombre d'heure : {{ formation.nbreHeures}} <br/>
+    Département : {{ formation.departement}} <br/>
+    Place prise : {{ formation.nbInscription}} <br/>
+    Place Max : {{ formation.inscriptionMax}} <br/>
+    <a href="{{path('app_formation_sup', {'id' : formation.id})}}">suppression</a></br>
+{% endfor %}

@@ -1,0 +1,10 @@
+Voici la liste des employés qui se nomme castaing : </br>
+{% if (message) %}
+    {{message}}
+{% endif %}
+{% for employe in lesEmployes %}
+    id : {{ employe.id}}<br/>
+    Nom : {{ employe.nom}} <br/>
+    Prenom : {{ employe.prenom}} <br/>
+    Statut: {{ employe.statut}} <br/>
+{% endfor %}
