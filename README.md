@@ -1,14 +1,34 @@
-Ce projet est sur Symfony 7.1.8 et sous Php version : PHP 8.2.18 
+Projet Symfony 7.1.8
 
-Dans les fichiers source fournis vous retrouverez :
+Ce projet est développé avec Symfony 7.1.8 et PHP 8.2.18.
 
-La base de donnée sql ./bdd/projet.sql
+Prérequis
 
-Vous pourrez utiliser comme utilisateur :
+Avant d’installer ce projet, assurez-vous d’avoir :
 
-compte admin : 
-Login : admin  
-Mdp : admin
-compte employe : 
-Login : toto 
-Mdp : toto
+- PHP 8.2.18 installé
+- Composer (gestionnaire de dépendances PHP)
+- PhpMyAdmin (ou un autre serveur de base de données compatible)
+Accès à l’application
+
+Vous pouvez utiliser les identifiants suivants pour vous connecter :
+
+- Compte Admin
+  - Login : admin
+  - Mot de passe : admin
+
+- Compte Employé 
+  - Login : toto  
+  - Mot de passe : toto
+
+Fonctionnalités
+
+- Connexion avec différents statut (Admin et Employé)
+Partie Employé :
+- Voir la liste des formations disponible
+- Possibilité de s'inscrire à une formation
+
+Partie Admin :
+- Voir la liste des formations
+- Création d'une foramtion
+- Pouvoir accepter ou refuser une inscription d'un employe
